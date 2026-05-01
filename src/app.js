@@ -220,14 +220,14 @@ function renderRadarChart() {
           beginAtZero: true,
           max: 100,
           ticks: {
-            color: "#55556a",
+            color: "#a89c8c",
             backdropColor: "transparent",
             font: { size: 10 },
           },
-          grid: { color: "#1e1e2e" },
-          angleLines: { color: "#1e1e2e" },
+          grid: { color: "#e8e0d4" },
+          angleLines: { color: "#e8e0d4" },
           pointLabels: {
-            color: "#8888a0",
+            color: "#7a6e5e",
             font: { size: 11 },
           },
         },
@@ -269,19 +269,19 @@ function renderBarChart() {
       maintainAspectRatio: false,
       scales: {
         x: {
-          ticks: { color: "#8888a0", font: { size: 10 }, maxRotation: 45 },
-          grid: { color: "#1e1e2e" },
+          ticks: { color: "#7a6e5e", font: { size: 10 }, maxRotation: 45 },
+          grid: { color: "#e8e0d4" },
         },
         y: {
           beginAtZero: true,
           max: 100,
-          ticks: { color: "#55556a", font: { size: 10 } },
-          grid: { color: "#1e1e2e" },
+          ticks: { color: "#a89c8c", font: { size: 10 } },
+          grid: { color: "#e8e0d4" },
         },
       },
       plugins: {
         legend: {
-          labels: { color: "#8888a0", font: { size: 11 }, usePointStyle: true, pointStyle: "rect" },
+          labels: { color: "#7a6e5e", font: { size: 11 }, usePointStyle: true, pointStyle: "rect" },
         },
       },
     },
