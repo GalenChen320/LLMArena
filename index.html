@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLM Arena — Model Leaderboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>" />
+  <link rel="stylesheet" href="src/styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚔️</span>
+        <h1>LLM Arena</h1>
+      </div>
+      <p class="tagline">Compare LLM performance across benchmarks</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Controls -->
+    <section class="controls">
+      <div class="control-group">
+        <label>Category</label>
+        <div class="pill-group" id="categoryFilter"></div>
+      </div>
+      <div class="control-group">
+        <label>Sort by</label>
+        <select id="sortSelect">
+          <option value="avg">Average Score</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Models</label>
+        <div class="model-toggles" id="modelToggles"></div>
+      </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard-section">
+      <div class="section-header">
+        <h2>🏆 Leaderboard</h2>
+        <span class="model-count" id="modelCount"></span>
+      </div>
+      <div class="table-wrapper">
+        <table class="leaderboard" id="leaderboard">
+          <thead>
+            <tr>
+              <th class="col-rank">#</th>
+              <th class="col-model">Model</th>
+              <th class="col-provider">Provider</th>
+              <th class="col-avg">Avg</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboardBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts-section">
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Radar — Overall Comparison</h3>
+          <div class="chart-container">
+            <canvas id="radarChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-card">
+          <h3>Bar — Benchmark Scores</h3>
+          <div class="chart-container">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmark Details -->
+    <section class="benchmarks-section">
+      <h2>📊 Benchmarks</h2>
+      <div class="benchmark-grid" id="benchmarkGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>LLM Arena — Data is for demonstration purposes only. Scores are simulated.</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
